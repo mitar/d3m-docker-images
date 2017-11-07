@@ -1,0 +1,9 @@
+FROM tozd/base:ubuntu-xenial
+
+RUN apt-get update -q -q && \
+ apt-get install --yes --force-yes python python-dbg python-dev python-pip python-virtualenv swig git build-essential cmake && \
+ pip install --force-reinstall pip==9.0.1 && \
+ pip install pycodestyle==2.3.1 typing==3.6.2 && \
+ apt-get install --yes --force-yes python-tk tk && \
+ pip install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl && \
+ pip install numpy scikit-learn[alldeps] pymc3 torchvision
