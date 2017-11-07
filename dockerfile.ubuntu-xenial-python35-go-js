@@ -8,7 +8,7 @@ RUN apt-get update -q -q && \
  apt-get install --yes --force-yes python3-tk tk && \
  pip3 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl && \
  pip3 install numpy scikit-learn[alldeps] pymc3 torchvision && \
- pip3 installl grpcio grpcio-tools
+ pip3 install grpcio grpcio-tools
 
 # Go
 RUN apt-get update -q -q && \
