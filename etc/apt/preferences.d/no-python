@@ -1,0 +1,47 @@
+Package: python3
+Pin: release *
+Pin-Priority: -1
+
+Package: python3.5
+Pin: release *
+Pin-Priority: -1
+
+Package: python3.5-minimal
+Pin: release *
+Pin-Priority: -1
+
+Package: python3-dev
+Pin: release *
+Pin-Priority: -1
+
+Package: libpython3.5
+Pin: release *
+Pin-Priority: -1
+
+Package: libpython3.5-minimal
+Pin: release *
+Pin-Priority: -1
+
+Package: python
+Pin: release *
+Pin-Priority: -1
+
+Package: python2.7
+Pin: release *
+Pin-Priority: -1
+
+Package: python2.7-minimal
+Pin: release *
+Pin-Priority: -1
+
+Package: python2-dev
+Pin: release *
+Pin-Priority: -1
+
+Package: libpython2.7
+Pin: release *
+Pin-Priority: -1
+
+Package: libpython2.7-minimal
+Pin: release *
+Pin-Priority: -1
