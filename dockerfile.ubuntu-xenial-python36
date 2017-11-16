@@ -33,4 +33,6 @@ RUN cd /usr/src && \
  tar xzf Python-3.6.2.tgz && \
  cd Python-3.6.2 && \
  ./configure --enable-optimizations --enable-shared --enable-loadable-sqlite-extensions --with-system-expat --with-system-ffi --enable-ipv6 && \
- make -j8 install
+ make -j8 install && \
+ ldconfig && \
+ rm -rf /usr/src/*
