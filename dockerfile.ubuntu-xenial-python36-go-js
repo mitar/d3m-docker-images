@@ -5,7 +5,7 @@ ENV PATH="${GOPATH}/bin:${PATH}"
 
 RUN \
  pip3 install pycodestyle==2.3.1 git+https://github.com/mitar/py-backwards.git && \
- pip3 install git+https://github.com/python/mypy.git@2bd11f60f0a0332b4c9537983a6ac7da4416e9ca && \
+ pip3 install mypy==0.560 && \
  pip3 install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp36-cp36m-manylinux1_x86_64.whl && \
  pip3 install numpy scikit-learn[alldeps] pymc3 torchvision && \
  pip3 install grpcio grpcio-tools
