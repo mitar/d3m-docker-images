@@ -1,4 +1,4 @@
-FROM datadrivendiscovery/images:ubuntu-xenial-python36
+FROM datadrivendiscovery/ubuntu-xenial-python36
 
 ENV GOPATH=/usr/local/go
 ENV PATH="${GOPATH}/bin:${PATH}"
