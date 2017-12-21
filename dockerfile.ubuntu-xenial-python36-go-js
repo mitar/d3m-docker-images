@@ -19,7 +19,8 @@ RUN apt-get update -q -q && \
  go get github.com/ckaznocha/protoc-gen-lint && \
  curl -OL https://github.com/google/protobuf/releases/download/v3.3.0/protoc-3.3.0-linux-x86_64.zip && \
  unzip protoc-3.3.0-linux-x86_64.zip -d protoc3 && \
- mv protoc3/bin/protoc /usr/bin/protoc
+ mv protoc3/bin/protoc /usr/bin/protoc && \
+ rm -f protoc-3.3.0-linux-x86_64.zip
 
 # JavaScript
 RUN wget -O - https://nodejs.org/dist/v6.11.2/node-v6.11.2-linux-x64.tar.xz | tar Jx --strip=1 -C /usr/local --anchored --exclude=node-v6.11.2-linux-x64/CHANGELOG.md --exclude=node-v6.11.2-linux-x64/LICENSE --exclude=node-v6.11.2-linux-x64/README.md && \
