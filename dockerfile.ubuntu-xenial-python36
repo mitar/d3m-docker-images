@@ -13,6 +13,14 @@ RUN sed -i 's/^# deb-src/deb-src/' /etc/apt/sources.list && \
  echo locales locales/default_environment_locale select en_US.UTF-8 | debconf-set-selections && \
  dpkg-reconfigure locales
 
+# Docker.
+RUN apt-get update -q -q && \
+ apt-get install apt-transport-https ca-certificates curl software-properties-common && \
+ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
+ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable && \
+ apt-get update -q -q && \
+ apt-get install --yes --force-yes docker-ce
+
 # Set locale to UTF-8 which makes Python read text in UTF-8 and not ASCII, but default.
 ENV LC_ALL=en_US.UTF-8
 
