@@ -8,7 +8,8 @@ RUN \
  pip3 install git+https://github.com/python/mypy.git@fix-forward-ref && \
  pip3 install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp36-cp36m-manylinux1_x86_64.whl && \
  pip3 install numpy scikit-learn[alldeps] pymc3 torchvision && \
- pip3 install grpcio grpcio-tools
+ pip3 install grpcio grpcio-tools && \
+ pip3 install docker
 
 # Go
 RUN apt-get update -q -q && \
