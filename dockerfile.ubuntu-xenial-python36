@@ -15,7 +15,7 @@ RUN sed -i 's/^# deb-src/deb-src/' /etc/apt/sources.list && \
 
 # Docker.
 RUN apt-get update -q -q && \
- apt-get install --yes --force-yes apt-transport-https ca-certificates curl && \
+ apt-get install --yes --force-yes apt-transport-https ca-certificates curl lsb_release && \
  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
  echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list && \
  apt-get update -q -q && \
